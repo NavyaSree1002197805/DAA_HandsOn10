@@ -1,6 +1,6 @@
 DAA HandsOn10
 
-# Question1: Output
+Question1: Output
 
 Bucket 0: []
 
