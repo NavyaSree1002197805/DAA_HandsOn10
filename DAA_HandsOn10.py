@@ -5,7 +5,7 @@ class Node:
         self.next = None
         self.prev = None
 
-class Doublylinkedlist:
+class DoublyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
@@ -62,7 +62,7 @@ class HashTable:
         self.load_factor = 4
         self.capacity = self.init_capacity
         self.size = 0
-        self.table = [Doublylinkedlist() for _ in range(self.capacity)]
+        self.table = [DoublyLinkedList() for _ in range(self.capacity)]
 
     def hash(self, key):
         Golden_Ratio = 0.6180339887  
@@ -71,7 +71,7 @@ class HashTable:
         return int(self.capacity * fraction)
 
     def resize(self, new_capacity):
-        new_table = [Doublylinkedlist() for _ in range(new_capacity)]
+        new_table = [DoublyLinkedList() for _ in range(new_capacity)]
         for bucket in self.table:
             current = bucket.head
             while current:
@@ -104,8 +104,7 @@ class HashTable:
     
     def print_hash_table(self):
         return "\n".join([f"Bucket {i}: {bucket}" for i, bucket in enumerate(self.table)])
-
-
+        
 #Example
 hash_table = HashTable()
 hash_table.add(2,20 )
@@ -113,7 +112,6 @@ hash_table.add(3, 30)
 hash_table.add(25, 100)
 hash_table.add(35, 150)
 hash_table.add(45, 200)
-
 print(hash_table.print_hash_table())
 print("value for the key 3 is :", hash_table.retrieve(3))
 hash_table.delete(3)
