@@ -1,7 +1,5 @@
 # Question1: Output
 
-= RESTART: C:\Users\navya\Desktop\MSCS-UTA\Sem1\DAA\DAA_HandsOn10.py
-
 Bucket 0: []
 
 Bucket 1: [(2, 20)]
